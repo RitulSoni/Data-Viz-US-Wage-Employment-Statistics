@@ -1,0 +1,65 @@
+html, body, #root, .container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(160deg, darkblue, purple);
+  }
+  
+  .navBar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+  }
+  
+  .navButton {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 4px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .navButton:hover {
+    box-shadow: 0 0 10px white, 0 0 5px white;
+  }
+  
+  .centerButton {
+    font-size: 4rem;
+    padding: 10px 40px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .centerButton:hover {
+    box-shadow: 0 0 10px white, 0 0 5px white;
+    transform: scale(1.1);
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+  }
+  

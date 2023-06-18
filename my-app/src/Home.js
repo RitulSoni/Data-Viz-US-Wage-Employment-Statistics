@@ -1,20 +1,23 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Home.css';
 
 function Home() {
   const navigate = useNavigate();
   
   return (
-    <div>
-      <nav>
-        <button>Button 1</button>
-        <button>Button 2</button>
-        <button>Button 3</button>
-        <button>Button 4</button>
+    <div className="container">
+      <nav className="navBar">
+        <button className="navButton" onClick={() => navigate('/Tableau')}>Data Viz</button>
+        <button className="navButton" onClick={() => navigate('/home')}>Home</button>
+        <button className="navButton" onClick={() => navigate('/about')}>About</button>
+        <button className="navButton" onClick={() => navigate('/github')}>Github</button>
+        <button className="navButton" onClick={() => navigate('/more')}>More</button>
       </nav>
-      <button style={{ fontSize: '2rem', padding: '10px' }} onClick={() => navigate('/tableau')}>
-        Go to Tableau
-      </button>
+      <div className="content">
+        <p>Some text goes here...</p>
+        <button className="centerButton" onClick={() => navigate('/Tableau')}>Data Viz</button>
+      </div>
     </div>
   );
 }

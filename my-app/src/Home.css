@@ -13,7 +13,7 @@
   .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: black;
   }
@@ -32,7 +32,7 @@
   }
   
   .navButton {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(187, 0, 0, 0.1);
     border-radius: 5px;
     color: white;
     text-align: center;
@@ -52,8 +52,9 @@
   .centerButton {
     font-size: 4rem;
     padding: 10px 50px;
+    margin-top: -30%;
     color: white;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(197, 36, 36, 0.1);
     border: 2px solid white;
     border-radius: 80px;
     cursor: pointer;
@@ -77,12 +78,50 @@
     transform: scale(1.1);
   }
   
-  .content {
-    text-align: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  .description a {
+    color: lightblue;
+    text-decoration: none;
   }
   
+  .description {
+    font-size: 1.8rem;
+    color: white;
+    text-align: justify;
+    /* margin-bottom: 12rem; */
+    position: relative;
+    margin-top: -20rem;
+    padding-bottom: 40%;
+    max-width: 1200px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 2rem;
+  }
+  
+ 
+ 
+
+/* 
+  .description {
+    font-size: 1.8rem;
+    color: white;
+    text-align: justify;
+    position: absolute;
+    top: 15%;
+    max-width: 800px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    position: relative; */

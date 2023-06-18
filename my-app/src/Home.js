@@ -8,14 +8,13 @@ function Home() {
   return (
     <div className="container">
       <nav className="navBar">
-        <button className="navButton" onClick={() => navigate('/Tableau')}>Data Viz</button>
         <button className="navButton" onClick={() => navigate('/home')}>Home</button>
+        <button className="navButton" onClick={() => navigate('/paper')}>Paper</button>
         <button className="navButton" onClick={() => navigate('/about')}>About</button>
         <button className="navButton" onClick={() => navigate('/github')}>Github</button>
         <button className="navButton" onClick={() => navigate('/more')}>More</button>
       </nav>
       <div className="content">
-        <p>Some text goes here...</p>
         <button className="centerButton" onClick={() => navigate('/Tableau')}>Data Viz</button>
       </div>
     </div>

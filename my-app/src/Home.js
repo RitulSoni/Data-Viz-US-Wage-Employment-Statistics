@@ -17,7 +17,7 @@ function Home() {
         <p className="description">
           This project is my personal endeavor in data visualization and Data Science with the analysis of 
           the United States Occupational Wage and Employment Statistics data from the past two decades. I 
-          sourced the data from the <a href="https://www.bls.gov/oes/tables.htm">Bureau of Labor Statistics</a> 
+          sourced the data from the <a href="https://www.bls.gov/oes/tables.htm">Bureau of Labor Statistics </a> 
           and meticulously cleaned and organized it into a dataset using Python. To ensure accuracy, I adjusted all values 
           for inflation using the latest Consumer Price Index (CPI) data available at  
           <a href="https://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/"> US Inflation Calculator</a>. 

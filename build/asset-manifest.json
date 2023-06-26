@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Data-Viz-US-Wage-Employment-Statistics/static/css/main.af4a908d.css",
+    "main.js": "/Data-Viz-US-Wage-Employment-Statistics/static/js/main.9ca590bf.js",
+    "index.html": "/Data-Viz-US-Wage-Employment-Statistics/index.html",
+    "main.af4a908d.css.map": "/Data-Viz-US-Wage-Employment-Statistics/static/css/main.af4a908d.css.map",
+    "main.9ca590bf.js.map": "/Data-Viz-US-Wage-Employment-Statistics/static/js/main.9ca590bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af4a908d.css",
+    "static/js/main.9ca590bf.js"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://vis.ritulsoni.com/",
+  "homepage": "https://vis.ritulsoni.com",
   "private": true,
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",

@@ -102,7 +102,6 @@
     padding: 2rem;
   }
   
-
   @media only screen and (max-width: 600px) {
     .navBar {
       position: fixed; /* make it fixed for mobile devices */
@@ -120,12 +119,12 @@
     .description {
       font-size: 1.4rem;
       padding: 0 5%;
-      padding-top: 50px; /* Add padding to prevent text hiding behind the navBar */
+      padding-top: 300px; /* Increase padding to move content further down */
     }
   
     .centerButton {
       font-size: 3rem;
-      padding: 5px 30px;
+      padding: 5px 20px;
     }
   }
   

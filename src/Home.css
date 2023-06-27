@@ -103,3 +103,120 @@
   }
   
  
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  html, body, #root, .container {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+  }
+  
+  .navBar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: white;
+    z-index: 10;
+  }
+  
+  .navButton {
+    background: rgba(187, 0, 0, 0.1);
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 4px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .navButton:hover {
+    box-shadow: 0 0 10px white, 0 0 5px white;
+  }
+  
+  .centerButton {
+    font-size: 4rem;
+    padding: 10px 50px;
+    color: white;
+    background: rgba(197, 36, 36, 0.1);
+    border: 2px solid white;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: glow 2s ease-in-out infinite;
+  }
+  
+  .centerButton:hover {
+    box-shadow: 0 0 10px white, 0 0 5px white;
+    transform: scale(1.1);
+  }
+  
+  .description a {
+    color: lightblue;
+    text-decoration: none;
+  }
+  
+  .description {
+    font-size: 1.8rem;
+    color: white;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 10%;
+    max-width: 1200px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 2rem;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .navBar {
+      flex-direction: column;
+    }
+    
+    .navButton {
+      font-size: 16px;
+      padding: 10px;
+      margin: 5px 0;
+    }
+  
+    .description {
+      font-size: 1.4rem;
+      padding: 0 5%;
+    }
+  
+    .centerButton {
+      font-size: 3rem;
+      padding: 5px 30px;
+    }
+  }
+  

@@ -106,12 +106,15 @@
   @media only screen and (max-width: 600px) {
     .navBar {
       flex-direction: column;
+      background-color: black;
+      max-height: 100vh; /* limit the height to viewport height */
+      overflow-y: auto; /* introduce scroll when content is taller */
     }
   
     .navButton {
       font-size: 16px;
       padding: 10px;
-      margin: 10px 0; /* Increase vertical margin */
+      margin: 10px 0;
     }
   
     .description {
@@ -124,4 +127,4 @@
       padding: 5px 30px;
     }
   }
- 
+  

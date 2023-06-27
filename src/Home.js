@@ -9,9 +9,9 @@ function Home() {
     <div className="container">
       <nav className="navBar">
         <button className="navButton" onClick={() => navigate('/paper')}>Paper</button>
-        <button className="navButton" onClick={() => navigate('/about')}>About</button>
-        <button className="navButton" onClick={() => navigate('/github')}>Github</button>
-        <button className="navButton" onClick={() => navigate('/more')}>More</button>
+        <button className="navButton" onClick={() => window.open('https://ritulsoni.com/about', '_blank')}>About</button>
+        <button className="navButton" onClick={() => window.open('https://github.com/RitulSoni/Data-Viz-US-Wage-Employment-Statistics.git', '_blank')}>Github</button>
+        <button className="navButton" onClick={() => window.open('https://ritulsoni.com', '_blank')}>More</button>
       </nav>
       <div className="content">
         <p className="description">

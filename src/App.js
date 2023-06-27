@@ -10,7 +10,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/tableau" element={<Tableau />} />
       <Route path="/Paper" element={<PDFViewer />} />
-      <Route path="/Github" element={<ExternalRedirect to="https://github.com/RitulSoni/Data-Viz-US-Wage-Employment-Statistics.git" />} />
+      {/* <Route path="/About" element={<ExternalRedirect to="https://ritulsoni.com/about" />} /> */}
+      {/* <Route path="/Github" element={<ExternalRedirect to="https://github.com/RitulSoni/Data-Viz-US-Wage-Employment-Statistics.git" />} /> */}
     </Routes>
   );
 }

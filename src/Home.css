@@ -105,21 +105,22 @@
 
   @media only screen and (max-width: 600px) {
     .navBar {
+      position: fixed; /* make it fixed for mobile devices */
       flex-direction: row;
-      position: fixed;
+      width: 100%; /* ensure it spans full width */
+      background-color: black; /* add background color for visibility */
     }
   
     .navButton {
       font-size: 16px;
       padding: 10px;
       margin: 10px 0; /* Increase vertical margin */
-      position: fixed;
     }
   
     .description {
       font-size: 1.4rem;
       padding: 0 5%;
-      position: fixed;
+      padding-top: 50px; /* Add padding to prevent text hiding behind the navBar */
     }
   
     .centerButton {
@@ -127,4 +128,4 @@
       padding: 5px 30px;
     }
   }
- 
+  

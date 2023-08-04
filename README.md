@@ -1,6 +1,6 @@
 # United States Employment and Wage Statistics - A Tableau Visualization
 
-Welcome to the repository for our dynamic and intuitive Tableau Visualization project that presents comprehensive data on employment and wage statistics in the United States. This project employs powerful visualization tools like Bubble Graphs and Racing Bar Charts, along with various filtering options to provide an in-depth understanding of the evolution and trends in different occupations over the years. 
+Welcome to the repository for my dynamic and intuitive Tableau Visualization project that presents comprehensive data on employment and wage statistics in the United States. This project employs powerful visualization tools like Bubble Graphs and Racing Bar Charts, along with various filtering options to provide an in-depth understanding of the evolution and trends in different occupations over the years. 
 
 ## Overview
 

@@ -51,7 +51,7 @@
   
   .centerButton {
     font-size: 4rem;
-    padding: 10px 50px;
+    padding: 10px 110px;
     color: white;
     background: rgba(197, 36, 36, 0.1);
     border: 2px solid white;
@@ -60,6 +60,19 @@
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     animation: glow 2s ease-in-out infinite;
+    margin-top: 40px;
+  }
+  .centerButton2 {
+    font-size: 4rem;
+    padding: 10px 50px;
+    color: white;
+    background: rgba(11, 183, 128, 0.1);
+    border: 2px solid white;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: glow2 2s ease-in-out infinite;
   }
   
   @keyframes glow {
@@ -71,12 +84,25 @@
       box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60000, 0 0 40px #e60000, 0 0 50px #e60000, 0 0 60px #e60000, 0 0 70px #e60000;
     }
   }
-  
+
+  @keyframes glow2 {
+    0% {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #192da0, 0 0 20px #192da0, 0 0 25px #192da0, 0 0 30px #192da0, 0 0 35px #e60000;
+    }
+    
+    100% {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #192da0, 0 0 40px #192da0, 0 0 50px #192da0, 0 0 60px #192da0, 0 0 70px #e60000;
+    }
+  }
+
   .centerButton:hover {
     box-shadow: 0 0 10px white, 0 0 5px white;
     transform: scale(1.1);
   }
-  
+  .centerButton2:hover {
+    box-shadow: 0 0 10px white, 0 0 5px white;
+    transform: scale(1.1);
+  }
   .description a {
     color: lightblue;
     text-decoration: none;

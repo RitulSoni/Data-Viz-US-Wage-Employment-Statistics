@@ -1,43 +1,61 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate, useLocation } from 'react-router-dom';
 import Home from './Home';
 import Tableau from './Tableau';
+import Header from './Header';
 import './App.css';
 
 function App() {
+  const location = useLocation();
+  const showHeader = location.pathname !== '/tableau';
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/tableau" element={<Tableau />} />
-      <Route path="/Paper" element={<PDFViewer />} />
-      {/* <Route path="/About" element={<ExternalRedirect to="https://ritulsoni.com/about" />} /> */}
-      {/* <Route path="/Github" element={<ExternalRedirect to="https://github.com/RitulSoni/Data-Viz-US-Wage-Employment-Statistics.git" />} /> */}
-    </Routes>
+    <div className="app">
+      {showHeader && <Header />}
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tableau" element={<Tableau />} />
+          <Route path="/Paper" element={<PDFViewer />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
 
-function ExternalRedirect({ to }) {
-  useEffect(() => {
-    const newWindow = window.open(to, '_blank', 'noopener,noreferrer')
-    if (newWindow) newWindow.opener = null
-  }, [to]);
-
-  return null;
-}
 
 function PDFViewer() {       
-  const [height, setHeight] = useState('100vh'); // initial value
+  const [height, setHeight] = useState('100vh');
   const navigate = useNavigate();
 
   useEffect(() => {
-    // set height to the window innerHeight
-    setHeight(`${window.innerHeight}px`);
-  }, []); // empty dependency array means this effect runs once on mount
+    const updateHeight = () => {
+      setHeight(`${window.innerHeight - 80}px`);
+    };
+    
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    
+    return () => window.removeEventListener('resize', updateHeight);
+  }, []);
 
   return (
-    <div>
-      <button onClick={() => navigate(-1)} className="backButton">Go Back</button> {/* this button takes the user back */}
-      <embed src="/static/Telephone Operator Analysis.pdf" type="application/pdf" width="100%" height={height} />
+    <div className="pdf-viewer">
+      <div className="pdf-header">
+        <button onClick={() => navigate(-1)} className="back-button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Back to Home
+        </button>
+        <h1 className="pdf-title">Research Paper: Technology Displacement and Labor Markets</h1>
+      </div>
+      <embed 
+        src="/static/Tech Deplacement and Labor Markets.pdf" 
+        type="application/pdf" 
+        className="pdf-embed"
+        height={height}
+      />
     </div>
   );
 }

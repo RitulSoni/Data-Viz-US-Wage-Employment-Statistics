@@ -1,0 +1,221 @@
+.tableau-container {
+  min-height: 100vh;
+  background: #fafbfc;
+  display: flex;
+  flex-direction: column;
+}
+
+.tableau-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #3182ce;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.back-button:hover {
+  background: #2c5aa0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+}
+
+.tableau-title {
+  flex: 1;
+  text-align: center;
+}
+
+.tableau-title h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.tableau-title p {
+  font-size: 0.95rem;
+  color: #718096;
+  margin: 0.25rem 0 0 0;
+  font-weight: 500;
+}
+
+.tableau-actions {
+  flex-shrink: 0;
+}
+
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: #3182ce;
+  border: 2px solid #3182ce;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.action-button:hover {
+  background: #3182ce;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+}
+
+.tableau-viz-container {
+  flex: 1;
+  position: relative;
+  background: white;
+  margin: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tableauViz {
+  border-radius: 12px;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(248, 250, 252, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-spinner {
+  text-align: center;
+  color: #667eea;
+}
+
+.loading-spinner p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .tableau-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .tableau-title {
+    text-align: left;
+    order: -1;
+  }
+  
+  .tableau-title h1 {
+    font-size: 1.25rem;
+  }
+  
+  .tableau-actions {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tableau-viz-container {
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tableau-header {
+    padding: 0.75rem;
+  }
+  
+  .back-button,
+  .action-button {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .tableau-title h1 {
+    font-size: 1.1rem;
+  }
+  
+  .tableau-title p {
+    font-size: 0.85rem;
+  }
+  
+  .tableau-viz-container {
+    margin: 0.25rem;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tableau-header {
+    padding: 0.5rem;
+  }
+  
+  .back-button,
+  .action-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .back-button span,
+  .action-button span {
+    display: none;
+  }
+  
+  .tableau-viz-container {
+    margin: 0;
+    border-radius: 0;
+  }
+}
